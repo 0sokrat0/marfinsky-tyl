@@ -1,39 +1,63 @@
 .header {
-    background-color: #282c34;
-    color: white;
-    padding: 20px 0;
-  }
-  
-  .header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .nav-links a:hover {
-    text-decoration: underline;
-  }
-  .navbar {
-    background-color: #343a40; /* Цвет фона */
-  }
-  
-  .nav-link {
-    color: #fff !important; /* Цвет ссылок */
-    font-size: 18px;
-  }
-  
-  .nav-link:hover {
-    color: #ffc107 !important; /* Цвет при наведении */
-  }
-  
+  background-color: #000218;
+  color: white;
+  padding: 10px 0;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 60px;
+  margin-right: 10px;
+}
+
+.navbar {
+  padding: 10px 20px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-size: 18px;
+}
+
+.navbar-nav .nav-link {
+  position: relative; /* Для управления псевдоэлементом */
+  color: #fff; /* Цвет текста */
+  text-decoration: none; /* Убираем стандартное подчеркивание */
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Расстояние от текста до подчеркивания */
+  left: 0;
+  width: 0;
+  height: 3px; /* Толщина подчеркивания */
+  background: linear-gradient(
+    to right, 
+    #fff 0%, 
+    #fff 33.33%, 
+    #0055ff 33.34%, 
+    #0055ff 66.66%, 
+    #ff0000 66.67%, 
+    #ff0000 100%
+  ); /* Градиент с четкими границами */
+  transition: width 0.3s ease; /* Плавное появление */
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%; /* Полностью подчеркивает текст при наведении */
+}
+
+
+.logo {
+  height: 40px;
+  width: auto;
+}

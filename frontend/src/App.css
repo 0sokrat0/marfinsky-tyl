@@ -2,7 +2,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #333;
+  background: #000218;
   color: #fff;
   padding: 10px;
   z-index: 1000; /* Чтобы шапка всегда была сверху */
@@ -10,7 +10,7 @@ header {
 
 nav {
   display: flex;
-  gap: 15px;
+  gap: 12px;
 }
 
 nav button {
@@ -26,7 +26,7 @@ nav button:hover {
 }
 
 .section {
-  height: 100vh;
+  height: 120vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,4 +44,33 @@ nav button:hover {
 
 html {
   scroll-behavior: smooth;
+}
+.photo {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 2px 2px 5px #000218;
+}
+
+
+.photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1; /* Размещаем изображение позади текста */
+}
+
+.photo h1,
+.photo p {
+  position: relative;
+  z-index: 1; /* Убедитесь, что текст выше изображения */
+  color: white;
 }
