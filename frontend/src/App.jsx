@@ -1,25 +1,33 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Posts from "./pages/Posts";
-import CreatePost from "./pages/CreatePost";
+import "./App.css";
 
 function App() {
-  console.log("App rendered"); // Лог для проверки работы
-  return  (
-    <Router>
+  return (
+    <div>
       <Header />
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/posts" element={<Posts />} />
-          <Route path="/create" element={<CreatePost />} />
-        </Routes>
+      <div id="home" className="section">
+        <h1>Домашняя страница</h1>
+        <p>Добро пожаловать на наш сайт!</p>
       </div>
-    </Router>
+      <div id="about" className="section">
+        <h1>О нас</h1>
+        <p>Здесь вы узнаете о нашей компании или проекте.</p>
+      </div>
+      <div id="posts" className="section">
+        <h1>Цели</h1>
+        <p>Это список наших постов.</p>
+      </div>
+      <div id="work_reports" className="section">
+        <h1>Отчеты о работе</h1>
+        <p>Это список наших отчетов о работе.</p>
+      </div>
+      <div id="contact" className="section">
+        <h1>Контакты</h1>
+        <p>Контактная информация.</p>
+      </div>
+      
+    </div>
   );
 }
 

@@ -1,0 +1,39 @@
+.header {
+    background-color: #282c34;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  .navbar {
+    background-color: #343a40; /* Цвет фона */
+  }
+  
+  .nav-link {
+    color: #fff !important; /* Цвет ссылок */
+    font-size: 18px;
+  }
+  
+  .nav-link:hover {
+    color: #ffc107 !important; /* Цвет при наведении */
+  }
+  
